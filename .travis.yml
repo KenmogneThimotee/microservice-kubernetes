@@ -23,11 +23,12 @@ script:
 - docker tag frontend:latest "$DOCKER_USERNAME"/frontend:latest
 - docker build -t reverseproxy ./udagram-reverseproxy
 - docker tag reverseproxy "$DOCKER_USERNAME"/reverseproxy:latest
-
-
-after_success:
 - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME" --password-stdin
 - docker push "$DOCKER_USERNAME"/udagram-api-feed
 - docker push "$DOCKER_USERNAME"/udagram-api-user
-- docker push "$DOCKER_USERNAME"/udagram-frontend
+- docker push "$DOCKER_USERNAME"/udagram-frontend:latest
 - docker push "$DOCKER_USERNAME"/reverseproxy
+
+
+after_success:
+- echo "Nothing to do."
