@@ -22,7 +22,7 @@ script:
 - docker build -t reverseproxy ./udagram-reverseproxy
 - docker tag reverseproxy "$DOCKER_USERNAME"/reverseproxy:latest
 - docker build -t frontend ./udagram-frontend
-- docker tag frontend "$DOCKER_USERNAME"/frontend:latest
+- docker tag frontend:latest "$DOCKER_USERNAME"/frontend:latest
 
 after_success:
 - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME" --password-stdin
