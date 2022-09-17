@@ -1,0 +1,13 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: micro-config
+data:
+  # property-like keys; each key maps to a simple value
+  POSTGRES_HOST: "postgres.cvnq0yglb51i.us-east-1.rds.amazonaws.com"
+  POSTGRES_DB: "postgres"
+  AWS_BUCKET: "micro-047929248593-dev"
+  AWS_REGION: "us-east-1"
+  AWS_PROFILE: "default"
+  JWT_SECRET: "abcdferd"
+  URL: "http://localhost:8100"
