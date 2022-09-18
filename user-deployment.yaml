@@ -20,6 +20,21 @@ spec:
         ports:
         - containerPort: 8080
         env:
+        - name: aws_access_key_id
+          valueFrom:
+            secretKeyRef:
+              name: aws-secret
+              key: aws_access_key_id
+        - name: aws_secret_access_key
+          valueFrom:
+            secretKeyRef:
+              name: aws-secret
+              key: aws_secret_access_key
+        - name: aws_session_token
+          valueFrom:
+            secretKeyRef:
+              name: aws-secret
+              key: aws_session_token
         - name: POSTGRES_USERNAME
           valueFrom:
             secretKeyRef:
