@@ -16,6 +16,6 @@ spec:
     spec:
       containers:
       - name: udagram-frontend
-        image: thimotee/udagram-frontend:v5
+        image: thimotee/udagram-frontend
         ports:
         - containerPort: 80

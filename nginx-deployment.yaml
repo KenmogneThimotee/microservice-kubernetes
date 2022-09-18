@@ -16,6 +16,6 @@ spec:
     spec:
       containers:
       - name: reverseproxy
-        image: thimotee/reverseproxy:v5
+        image: thimotee/reverseproxy
         ports:
         - containerPort: 8080
