@@ -21,8 +21,8 @@ script:
 - docker tag udagram-api-user "$DOCKER_USERNAME"/udagram-api-user:latest
 - docker build -t frontend ./udagram-frontend
 - docker tag frontend "$DOCKER_USERNAME"/udagram-frontend
-- docker build -t reverseproxy:v5 ./udagram-reverseproxy
-- docker tag reverseproxy:v5 "$DOCKER_USERNAME"/reverseproxy:v5
+- docker build -t reverseproxy ./udagram-reverseproxy
+- docker tag reverseproxy "$DOCKER_USERNAME"/reverseproxy
 
 
 after_success:
@@ -30,4 +30,4 @@ after_success:
 - docker push "$DOCKER_USERNAME"/udagram-api-feed
 - docker push "$DOCKER_USERNAME"/udagram-api-user
 - docker push "$DOCKER_USERNAME"/udagram-frontend
-- docker push "$DOCKER_USERNAME"/reverseproxy:v5
+- docker push "$DOCKER_USERNAME"/reverseproxy
