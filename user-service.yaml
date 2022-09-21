@@ -4,7 +4,7 @@ metadata:
   name: user-service
 spec:
   selector:
-    app.kubernetes.io/name: udagram-api-user
+    app: udagram-api-user
   ports:
     - protocol: TCP
       port: 8080
