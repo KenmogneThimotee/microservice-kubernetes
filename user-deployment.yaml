@@ -17,6 +17,10 @@ spec:
       containers:
       - name: udagram-api-user
         image: thimotee/udagram-api-user
+        resources:
+          requests:
+            memory: "64Mi"
+            cpu: "250m"
         ports:
         - containerPort: 8080
         env:

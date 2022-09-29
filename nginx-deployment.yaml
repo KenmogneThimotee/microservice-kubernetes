@@ -17,5 +17,9 @@ spec:
       containers:
       - name: reverseproxy
         image: thimotee/reverseproxy
+        resources:
+          requests:
+            memory: "64Mi"
+            cpu: "250m"
         ports:
         - containerPort: 8080
